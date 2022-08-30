@@ -21,7 +21,7 @@ const characterSchema = new Schema(
         element: String,
         weapon: String,
         nation: String,
-        rarity: String,
+        rarity: Number,
         skillTalents: [skillTalentSchema],
         passiveTalents: [passiveTalentSchema],
         constellations: [constellationSchema]
