@@ -22,7 +22,7 @@ const typeDefs = gql`
     type constellation {
         name: String
         description: String
-        level: Int
+        unlock: String
     }
 
     type Character {
