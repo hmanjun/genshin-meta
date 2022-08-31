@@ -5,6 +5,7 @@ const moment = require('moment')
 const skillTalentSchema = require('./skillTalentSchema')
 const passiveTalentSchema = require('./passiveTalentSchema')
 const constellationSchema = require('./constellationSchema')
+const teamSchema = require('./teamSchema')
 
 const characterSchema = new Schema(
     {
@@ -24,7 +25,8 @@ const characterSchema = new Schema(
         rarity: Number,
         skillTalents: [skillTalentSchema],
         passiveTalents: [passiveTalentSchema],
-        constellations: [constellationSchema]
+        constellations: [constellationSchema],
+        teams: [teamSchema]
 
     }
 )
