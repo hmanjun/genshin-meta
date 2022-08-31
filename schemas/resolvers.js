@@ -8,17 +8,10 @@ const resolvers = {
     },
 
     Mutation: {
-        addCharacter: async (parent, args) => {
-            const {name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations} = args
-            try {
-                const characterData = await Character.create({name: "testli"})
-                if(!characterData){
-                    console.error('No character data') 
-                }
-                return characterData
-            } catch (err) {
-                console.error('Failed at creating character')
-            }
+        addCharacter: async (parent, {name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations}) => {
+            return await Character.create({name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations})
         }
     }
 }
+
+module.exports = resolvers
