@@ -18,8 +18,8 @@ const characterSchema = new Schema(
             get: date => moment(date).format('YYYY-MM-D')
         },
         description: String,
-        element: String,
-        weapon_type: String,
+        vision: String,
+        weaponType: String,
         nation: String,
         rarity: Number,
         skillTalents: [skillTalentSchema],

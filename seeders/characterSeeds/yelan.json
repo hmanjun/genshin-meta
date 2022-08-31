@@ -1,7 +1,7 @@
 {
     "name": "Yelan",
     "vision": "Hydro",
-    "weapon_type": "Bow",
+    "weaponType": "Bow",
     "nation": "Liyue",
     "rarity": 5,
     "constellation": "Umbrabilis Orchis",
