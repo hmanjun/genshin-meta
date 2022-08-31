@@ -7,6 +7,7 @@ const passiveTalentSchema = require('./passiveTalentSchema')
 const constellationSchema = require('./constellationSchema')
 const teamSchema = require('./teamSchema')
 const artifactSetSchema = require('./artifactSetSchema')
+const weaponSchema = require('./weaponSchema')
 
 const characterSchema = new Schema(
     {
@@ -27,9 +28,10 @@ const characterSchema = new Schema(
         skillTalents: [skillTalentSchema],
         passiveTalents: [passiveTalentSchema],
         constellations: [constellationSchema],
-        teams: [teamSchema],
-        artifactSets: [artifactSetSchema]
-
+        premiumWeapon: weaponSchema,
+        budgetWeapon: weaponSchema,
+        artifactSets: [artifactSetSchema],
+        teams: [teamSchema]
     }
 )
 
