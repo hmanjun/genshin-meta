@@ -1,10 +1,16 @@
 const {gql} = require('apollo-server-express')
 
 const typeDefs = gql`
+    type upgrade {
+        name: String
+        value: String
+    }
+
     type skillTalent {
         name: String
         type: String
         description: String
+        upgrades: [upgrade]
     }
 
     type passiveTalent {
@@ -16,15 +22,15 @@ const typeDefs = gql`
     type constellation {
         name: String
         description: String
-        level: Int
+        unlock: String
     }
 
     type Character {
         name: String!
         updatedAt: String!
         description: String
-        element: String
-        weapon: String
+        vision: String
+        weaponType: String
         nation: String
         rarity: Int
         skillTalents: [skillTalent]
