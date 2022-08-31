@@ -9,9 +9,9 @@ const resolvers = {
 
     Mutation: {
         addCharacter: async (parent, args) => {
-            //const {name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations} = args
+            const {name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations} = args
             try {
-                const characterData = await Character.create({args})
+                const characterData = await Character.create({name: "testli"})
                 if(!characterData){
                     console.error('No character data') 
                 }
