@@ -1,4 +1,4 @@
-const {Schema, model} = require('moongose')
+const {Schema, model} = require('mongoose')
 
 const passiveTalentSchema = new Schema(
     {
@@ -7,7 +7,7 @@ const passiveTalentSchema = new Schema(
             required: true
         },
         unlock: {
-            type: string,
+            type: String,
             requred: true
         },
         description: {
