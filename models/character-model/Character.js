@@ -19,7 +19,7 @@ const characterSchema = new Schema(
         },
         description: String,
         element: String,
-        weapon: String,
+        weapon_type: String,
         nation: String,
         rarity: Number,
         skillTalents: [skillTalentSchema],

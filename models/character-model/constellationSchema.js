@@ -10,8 +10,8 @@ const constellationSchema = new Schema(
             type: String,
             required: true
         },
-        level: {
-            type: Number,
+        unlock: {
+            type: String,
             required: true
         }
     }
