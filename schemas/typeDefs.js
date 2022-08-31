@@ -1,6 +1,24 @@
 const {gql} = require('apollo-server-express')
 
 const typeDefs = gql`
+    type skillTalent {
+        name: String
+        type: String
+        description: String
+    }
+
+    type passiveTalent {
+        name: String
+        unlock: String
+        description: String
+    }
+
+    type constellation {
+        name: String
+        description: String
+        level: Int
+    }
+
     type Character {
         name: String!
         updatedAt: String!
@@ -32,7 +50,7 @@ const typeDefs = gql`
 
     input constellationInput {
         name: String
-        description: Name
+        description: String
         level: Int
     }
 
