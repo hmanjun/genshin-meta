@@ -55,17 +55,7 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addCharacter(name: String!,
-            updatedAt: String,
-            description: String,
-            element: String,
-            weapon: String,
-            nation: String,
-            rarity: Int,
-            skillTalents: [skillTalentInput],
-            passiveTalents: [passiveTalentInput],
-            constellations: [constellationInput]): Character
-        
+        addCharacter(name: String!, updatedAt: String, description: String, element: String, weapon: String, nation: String, rarity: Int, skillTalents: [skillTalentInput], passiveTalents: [passiveTalentInput], constellations: [constellationInput]): Character
     }
 `
 
