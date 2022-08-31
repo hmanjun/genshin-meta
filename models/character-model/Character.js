@@ -1,4 +1,4 @@
-const {Schema, model} = require('moongose')
+const {Schema, model} = require('mongoose')
 
 const moment = require('moment')
 
@@ -21,7 +21,7 @@ const characterSchema = new Schema(
         element: String,
         weapon: String,
         nation: String,
-        rarity: String,
+        rarity: Number,
         skillTalents: [skillTalentSchema],
         passiveTalents: [passiveTalentSchema],
         constellations: [constellationSchema]
