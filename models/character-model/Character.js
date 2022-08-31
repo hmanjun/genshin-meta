@@ -6,6 +6,7 @@ const skillTalentSchema = require('./skillTalentSchema')
 const passiveTalentSchema = require('./passiveTalentSchema')
 const constellationSchema = require('./constellationSchema')
 const teamSchema = require('./teamSchema')
+const artifactSetSchema = require('./artifactSetSchema')
 
 const characterSchema = new Schema(
     {
@@ -26,7 +27,8 @@ const characterSchema = new Schema(
         skillTalents: [skillTalentSchema],
         passiveTalents: [passiveTalentSchema],
         constellations: [constellationSchema],
-        teams: [teamSchema]
+        teams: [teamSchema],
+        artifactSets: [artifactSetSchema]
 
     }
 )
