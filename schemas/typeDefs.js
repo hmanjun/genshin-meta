@@ -38,6 +38,17 @@ const typeDefs = gql`
         constellations: [constellation]
     }
 
+    type User {
+        username: String
+        email: String
+        password: String
+    }
+
+    type Auth {
+        token: ID!
+        profile: User
+    }
+
     type Query {
         allCharacters: [Character]
     }
@@ -61,6 +72,9 @@ const typeDefs = gql`
     }
 
     type Mutation {
+        addUser(username: String!, email: String!, password: String!): Auth
+        login(email: String!, password: String!): Auth
+
         addCharacter(name: String!, updatedAt: String, description: String, element: String, weapon: String, nation: String, rarity: Int, skillTalents: [skillTalentInput], passiveTalents: [passiveTalentInput], constellations: [constellationInput]): Character
     }
 `
