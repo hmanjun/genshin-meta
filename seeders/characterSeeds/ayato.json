@@ -1,6 +1,7 @@
 {
     "name": "Ayato",
     "vision": "Hydro",
+    "imagePath": "ayato",
     "weaponType": "Sword",
     "nation": "Inazuma",
     "affiliation": "Yashiro Commission",

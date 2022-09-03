@@ -2,6 +2,7 @@
     "name": "Gorou",
     "title": "Canine Warrior",
     "vision": "Geo",
+    "imagePath": "gorou",
     "weaponType": "Bow",
     "gender": "Male",
     "nation": "Inazuma",
