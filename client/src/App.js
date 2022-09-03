@@ -1,6 +1,9 @@
 import React from 'react'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+
+import Navbar from './components/navbar'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -10,9 +13,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div>
-        <h1>Test</h1>
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+          <div>
+            <Routes>
+              <Route
+                path='/'
+                element={""}
+              />
+            </Routes>
+          </div>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
