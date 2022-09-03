@@ -1,6 +1,7 @@
 {
     "name": "Yelan",
     "vision": "Hydro",
+    "imagePath": "yelan",
     "weaponType": "Bow",
     "nation": "Liyue",
     "rarity": 5,
