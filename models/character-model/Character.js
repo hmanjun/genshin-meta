@@ -20,6 +20,7 @@ const characterSchema = new Schema(
             default: Date.now,
             get: date => moment(date).format('YYYY-MM-D')
         },
+        imagePath: String,
         description: String,
         vision: String,
         weaponType: String,
