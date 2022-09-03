@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Navbar from './components/navbar'
+import Home from './pages/Home'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -20,7 +21,7 @@ function App() {
             <Routes>
               <Route
                 path='/'
-                element={""}
+                element={<Home />}
               />
             </Routes>
           </div>
