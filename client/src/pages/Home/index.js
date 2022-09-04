@@ -12,11 +12,11 @@ const Home = () => {
 
     return (
         <main>
-            <div id="title">
+            <div className="title">
                 <h1>Genshin Meta</h1>
             </div>
-            <div id="content">
-                <h2 id="content-title">All Characters</h2>
+            <div class="content">
+                <h2 class="content-title">All Characters</h2>
                 <div id="card-container">
                     {loading ? (
                         <div>Loading cards...</div>

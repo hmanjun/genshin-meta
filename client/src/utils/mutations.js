@@ -10,3 +10,5 @@ const LOGIN_USER = gql `
         }
     }
 `
+
+export {LOGIN_USER}
