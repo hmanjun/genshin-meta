@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from '@apollo/client';
 import { QUERY_CARD } from '../../utils/queries';
+import Card from '../../components/character-card'
 
 
 const Home = () => {
@@ -21,8 +22,7 @@ const Home = () => {
                 {loading ? (
                     <div>Loading cards...</div>
                 ):(
-                    <div>
-                    </div>
+                    characters.map((char) => (<Card character={char}/>))
                 )}
             </div>
         </main>

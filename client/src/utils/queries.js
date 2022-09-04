@@ -13,6 +13,7 @@ const QUERY_CARD = gql`
         allCharacters {
             name
             imagePath
+            rarity
         }
     }
 `
