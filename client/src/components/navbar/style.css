@@ -5,7 +5,7 @@ nav {
     width: 17%;
 }
 
-a {
+.nav-link {
     text-decoration: none;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +17,7 @@ a {
     background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));
 }
 
-span {
+.nav-span {
     margin-left: 10px;
 }
 

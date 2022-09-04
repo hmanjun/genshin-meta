@@ -10,13 +10,13 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to='/'> <span>Home</span></Link>
+            <Link to='/' className="nav-link"> <span className="nav-span">Home</span></Link>
             {loading ? (
                 <div>Loading links...</div>
             ) : (
                 characters.map((char) => (
-                    <Link to={`/characters/${char.name}`}>
-                        <span>{`${char.name} build`}</span>
+                    <Link to={`/characters/${char.name}`} className="nav-link">
+                        <span className="nav-span">{`${char.name} build`}</span>
                     </Link>
                 ))
             )}

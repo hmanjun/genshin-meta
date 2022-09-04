@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form span{
+    color: white;
+    margin-left: 0px;
+}
+
+.form-btns-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-submit {
+    margin-right: 30px;
+}
