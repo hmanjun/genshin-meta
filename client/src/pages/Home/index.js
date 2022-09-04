@@ -15,8 +15,8 @@ const Home = () => {
             <div className="title">
                 <h1>Genshin Meta</h1>
             </div>
-            <div className="content">
-                <h2 className="content-title">All Characters</h2>
+            <div class="content">
+                <h2 class="content-title">All Characters</h2>
                 <div id="card-container">
                     {loading ? (
                         <div>Loading cards...</div>
