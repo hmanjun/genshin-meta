@@ -1,0 +1,22 @@
+form span {
+    color: white;
+    margin-left: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-input {
+    margin-top:10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 20px;
+}
+
+.form-btns-holder {
+    display: flex;
+    justify-content: space-between;
+}
