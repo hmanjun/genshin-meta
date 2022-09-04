@@ -28,6 +28,7 @@ const typeDefs = gql`
     type Character {
         name: String!
         updatedAt: String!
+        imagePath: String
         description: String
         vision: String
         weaponType: String

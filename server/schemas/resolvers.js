@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth')
 const resolvers = {
     Query: {
         allCharacters: async () => {
-            return await Character.find()
+            return await Character.find().sort({name: 1})
         }
     },
 
