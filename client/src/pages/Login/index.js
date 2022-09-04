@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER} from '../../utils/mutations'
 
+import './style.css'
+
 import Auth from '../../utils/auth';
 
 const Login = () => {
@@ -65,12 +67,21 @@ const Login = () => {
                             value={formState.password}
                             onChange={handleChange} 
                         />
-                        <button 
-                            className='form-submit'
-                            type='submit'
-                        >
-                            Submit
-                        </button>
+                        <div className='form-btns-holder'>
+                            <button 
+                                className='form-submit'
+                                type='submit'
+                            >
+                                Login
+                            </button>
+                            <div>
+                                <Link to="/signup">
+                                    <button className='alt-form'>
+                                        Register
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
                     </form>
                 )}
 
