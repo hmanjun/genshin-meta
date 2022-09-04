@@ -15,9 +15,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div id="screen-wrapper">
           <Navbar />
-          <div>
+          <div id="page-container">
             <Routes>
               <Route
                 path='/'
