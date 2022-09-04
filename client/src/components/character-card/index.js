@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './style.css'
 
 const Card = ({character}) => {
     return (
-        <div className={character.rarity === 5 ? "5star" : "4star"}>
+        <Link to={`/characters/${character.name}`} className={character.rarity === 5 ? "gold" : "purple"}>
             <img alt={`${character.name} icon`} src={require(`../../images/${character.imagePath}/icon.png`)}/>
-            <span>{character.name}</span>
-        </div>
+            <div className='card-name'><h5>{character.name}</h5></div>
+        </Link>
     )
 }
 
