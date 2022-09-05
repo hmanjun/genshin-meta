@@ -14,7 +14,7 @@ const resolvers = {
 
         getCharacter: async (parent, {_id}) => {
             const params = _id ? {_id} : {}
-            return Character.find(params)
+            return Character.find(params).populate('comments')
         }
     },
 

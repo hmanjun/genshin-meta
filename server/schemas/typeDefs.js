@@ -33,6 +33,7 @@ const typeDefs = gql`
     }
 
     type Character {
+        _id: ID!
         name: String!
         updatedAt: String!
         imagePath: String
@@ -61,7 +62,7 @@ const typeDefs = gql`
     type Query {
         allCharacters: [Character]
         allComments: [Comment]
-        getCharacter(_id: String): Character
+        getCharacter(_id: String): [Character]
     }
 
     type Mutation {
