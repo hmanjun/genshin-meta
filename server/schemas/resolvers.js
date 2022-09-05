@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth')
 const resolvers = {
     Query: {
         allCharacters: async () => {
-            return await Character.find().sort({name: 1})
+            return await Character.find().sort({name: 1}).populate('comments')
         },
 
         allComments: async () => {
@@ -15,7 +15,7 @@ const resolvers = {
 
     Mutation: {
         addUser: async (parent, {username, email, password}) => {
-            const user = await User.create({username, email, password})
+            const user = await (await User.create({username, email, password}))
             const token = signToken(user)
 
             return {token, user}
@@ -33,8 +33,14 @@ const resolvers = {
 
         },
 
-        addCharacter: async (parent, {name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations}) => {
-            return await Character.create({name, updatedAt, description, element, weapon, nation, rarity, skillTalents, passiveTalents, constellations})
+        addComment: async (parent, {id, name, body, target}) => {
+            const commentData = await Comment.create({name,body,target})
+            await Character.findOneAndUpdate(
+                {_id: id},
+                {$push: {comments: commentData._id}},
+                {new: true}
+            )
+            return commentData
         }
     }
 }
