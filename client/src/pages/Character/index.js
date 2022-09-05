@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { QUERY_CHARACTER } from '../../utils/queries'
 
 import InfoSection from '../../components/basic-info-section'
+import TalentContainer from '../../components/talent-container'
 
 const Character = () => {
     let {id} = useParams()
@@ -27,6 +28,10 @@ const Character = () => {
                     <div className='content'>
                         <h2 className='content-title'>Basic Info</h2>
                         <InfoSection character={character}/>
+                    </div>
+                    <div className='content'>
+                        <h2 className='content-title'>Skill Talents</h2>
+                        <TalentContainer talents={character.skillTalents}/>
                     </div>
                 </div>
             )}
