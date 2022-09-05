@@ -25,6 +25,13 @@ const typeDefs = gql`
         unlock: String
     }
 
+    type Comment {
+        _id: ID
+        name: String
+        body: String
+        target: String
+    }
+
     type Character {
         name: String!
         updatedAt: String!
@@ -37,6 +44,7 @@ const typeDefs = gql`
         skillTalents: [skillTalent]
         passiveTalents: [passiveTalent]
         constellations: [constellation]
+        comments: [Comment]
     }
 
     type User {
@@ -52,31 +60,14 @@ const typeDefs = gql`
 
     type Query {
         allCharacters: [Character]
-    }
-
-    input skillTalentInput {
-        name: String
-        type: String
-        description: String
-    }
-
-    input passiveTalentInput {
-        name: String
-        unlock: String
-        description: String
-    }
-
-    input constellationInput {
-        name: String
-        description: String
-        level: Int
+        allComments: [Comment]
     }
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
 
-        addCharacter(name: String!, updatedAt: String, description: String, element: String, weapon: String, nation: String, rarity: Int, skillTalents: [skillTalentInput], passiveTalents: [passiveTalentInput], constellations: [constellationInput]): Character
+        addComment(id:ID, name: String!, body: String!, target: String!): Comment
     }
 `
 

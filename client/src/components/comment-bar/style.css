@@ -1,0 +1,70 @@
+.log-btn-icon {
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+}
+
+aside {
+    width: 16%;
+}
+
+.log-btn {
+    background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));
+    padding: 4px;
+}
+
+.log-span {
+    color: rgb(247, 187, 75);
+    margin-left: 10px;
+}
+
+.log-wrapper {
+    border: solid;
+    border-width: thin;
+    border-color: gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 1px;
+}
+
+.log-btn:hover {
+    cursor: pointer;
+}
+
+#top-comments-container {
+    margin-top: 5px;
+    background-color: black;
+    padding: 1px;
+}
+
+.comment-card {
+    border: solid;
+    border-width: thin;
+    border-color: gray;
+    border-radius: 10px;
+
+    padding: 5px;
+    margin:3px;
+
+    color: white;
+
+    background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));
+}
+
+.side-comment-body {
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.side-comm-target{
+    color: rgb(247, 187, 75);
+}
+
+#side-comm-splitter{
+    background-color: black;
+    height: 4px;
+    margin-top: 5px;
+}
