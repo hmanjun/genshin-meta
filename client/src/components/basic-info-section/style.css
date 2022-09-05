@@ -1,0 +1,50 @@
+.basic-info-holder {
+    width: 100%;
+}
+
+.spread {
+    width: 99%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+.spread-ele{
+    height: 64px;
+    width: 64px;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.th-col {
+    width: 25%;
+}
+
+.tr-cont{
+    width: 75%;
+}
+
+.tr-cont, .th-col {
+    border: none;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.table {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.t-l {
+    background-color: rgb(37, 37, 37);
+}
+
+.t-b {
+    background-color: rgb(15, 15, 15);
+}

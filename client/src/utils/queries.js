@@ -30,7 +30,7 @@ const QUERY_COMMENTS = gql`
 `
 
 const QUERY_CHARACTER = gql`
-query allInfo($id: String) {
+  query allInfo($id: String) {
     getCharacter(_id: $id) {
       name
       updatedAt
