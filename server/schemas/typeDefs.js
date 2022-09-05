@@ -61,13 +61,14 @@ const typeDefs = gql`
     type Query {
         allCharacters: [Character]
         allComments: [Comment]
+        getCharacter(_id: String): Character
     }
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
 
-        addComment(id:ID, name: String!, body: String!, target: String!): Comment
+        addComment(id:String, name: String!, body: String!, target: String!): Comment
     }
 `
 
