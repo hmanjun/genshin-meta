@@ -1,17 +1,17 @@
 import React from 'react'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context'
 import './App.css';
 
 import Navbar from './components/navbar'
+import CommentBar from './components/comment-bar';
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup';
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache()
+const httpLink = createHttpLink({
+  uri: '/graphql'
 })
 
 const authLink = setContext((_, {headers}) => {
@@ -24,6 +24,11 @@ const authLink = setContext((_, {headers}) => {
       authorization: token ? `Bearer ${token}` : ''
     }
   }
+})
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
 })
 
 function App() {
@@ -48,6 +53,7 @@ function App() {
               />
             </Routes>
           </div>
+          <CommentBar />
         </div>
       </Router>
     </ApolloProvider>
