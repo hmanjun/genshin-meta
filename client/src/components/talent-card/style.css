@@ -1,0 +1,74 @@
+.talent-sumary-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+    background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));
+
+    border: solid;
+    border-width: thin;
+    border-color: gray;
+    border-radius: 10px;
+
+    width: 300px;
+
+    margin: 5px;
+    padding: 10px;
+}
+
+.talent-icon {
+    height: 45px;
+    width: 45px;
+}
+
+.talent-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.talent-description-wrapper{
+    color: white;
+    background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));
+
+    display: flex;
+    align-items: center;
+
+    border: solid;
+    border-width: thin;
+    border-color: gray;
+    border-radius: 10px;
+
+    width: 80%;
+
+    margin: 5px;
+    padding: 10px;
+}
+
+.upg-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upg-row {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom:5px;
+}
+
+.light-row{
+    background-color: rgb(37, 37, 37);
+}
+
+.dark-row {
+    background-color: rgb(20, 20, 20);
+}

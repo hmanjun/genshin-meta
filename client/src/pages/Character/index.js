@@ -31,7 +31,7 @@ const Character = () => {
                     </div>
                     <div className='content'>
                         <h2 className='content-title'>Skill Talents</h2>
-                        <TalentContainer talents={character.skillTalents}/>
+                        <TalentContainer talents={character.skillTalents} passive={false} imgPath={character.imagePath}/>
                     </div>
                 </div>
             )}
