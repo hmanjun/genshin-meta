@@ -18,5 +18,15 @@ const QUERY_CARD = gql`
     }
 `
 
+const QUERY_COMMENTS = gql`
+    query recentComments {
+        allComments {
+            name
+            body
+            target
+        }
+    }
+`
 
-export {QUERY_NAMES, QUERY_CARD}
+
+export {QUERY_NAMES, QUERY_CARD, QUERY_COMMENTS}
