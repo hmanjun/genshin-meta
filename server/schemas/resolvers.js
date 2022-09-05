@@ -1,11 +1,15 @@
 const { AuthenticationError } = require('apollo-server-express')
-const {Character, User} = require('../models')
+const {Character, User, Comment} = require('../models')
 const { signToken } = require('../utils/auth')
 
 const resolvers = {
     Query: {
         allCharacters: async () => {
             return await Character.find().sort({name: 1})
+        },
+
+        allComments: async () => {
+            return await Comment.find().sort({_id:-1}).limit(3)
         }
     },
 

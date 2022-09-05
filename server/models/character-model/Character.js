@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose')
+const {Schema, model, default: mongoose} = require('mongoose')
 
 const moment = require('moment')
 
@@ -32,7 +32,11 @@ const characterSchema = new Schema(
         premiumWeapon: weaponSchema,
         budgetWeapon: weaponSchema,
         artifactSets: [artifactSetSchema],
-        teams: [teamSchema]
+        teams: [teamSchema],
+        comments: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'comment'
+        }]
     }
 )
 
