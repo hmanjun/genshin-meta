@@ -1,0 +1,38 @@
+#end-coms-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 98%;
+
+    padding: 10px;
+}
+
+.commentt-card {
+    width: 92%;
+    border: solid;
+    border-color: gray;
+    border-width: thin;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));
+
+    margin-bottom: 10px;
+}
+
+.comment-icon {
+    height: 45px;
+    width: 45px;
+
+    border: none;
+    border-radius: 25px;
+}
+
+.c-name {
+    margin-left: 10px;
+    color: rgb(247, 187, 75);
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}

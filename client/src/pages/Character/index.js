@@ -10,6 +10,7 @@ import WeaponContainer from '../../components/weapons-container'
 import ArtifactsContainer from '../../components/artifacts-container'
 import TeamsContainer from '../../components/team-container'
 import CommentForm from '../../components/comment-form'
+import CommentContainer from '../../components/character-comments'
 
 const Character = () => {
     let {id} = useParams()
@@ -68,6 +69,10 @@ const Character = () => {
                     <div className='content'>
                         <h2 className='content-title'>Add Comment</h2>
                         <CommentForm target={character.name} id={id}/>
+                    </div>
+                    <div className='content'>
+                        <h2 className='content-title'>All Comments</h2>
+                        <CommentContainer comments={character.comments}/>
                     </div>
                 </div>
             )}
