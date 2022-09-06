@@ -6,6 +6,7 @@ import { QUERY_CHARACTER } from '../../utils/queries'
 import InfoSection from '../../components/basic-info-section'
 import TalentContainer from '../../components/talent-container'
 import ConstContainer from '../../components/constellation-container'
+import WeaponContainer from '../../components/weapons-container'
 
 const Character = () => {
     let {id} = useParams()
@@ -16,6 +17,7 @@ const Character = () => {
     const character = data?.getCharacter[0] || []
     
     //window.document.title = `${character.name} Build | Genshin Meta`
+    //console.log(character)
 
     return (
         <main>
@@ -41,6 +43,10 @@ const Character = () => {
                     <div className='content'>
                         <h2 className='content-title'>Constellations</h2>
                         <ConstContainer cons={character.constellations} imgPath={character.imagePath}/>
+                    </div>
+                    <div className='content'>
+                        <h2 className='content-title'>Best Weapons</h2>
+                        <WeaponContainer weapons={{"premiumWeapon": character.premiumWeapon, "budgetWeapon": character.budgetWeapon}}/>
                     </div>
                 </div>
             )}

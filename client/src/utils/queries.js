@@ -66,6 +66,27 @@ const QUERY_CHARACTER = gql`
         body
         target
       }
+      premiumWeapon {
+        name
+        type
+        description
+        imagePath
+      }
+      budgetWeapon {
+        name
+        type
+        description
+        imagePath
+      }
+      artifactSets {
+        names
+        imagePaths
+        mainStats
+        benefits {
+          piece
+          description
+        }
+      }
     }
   }
 `
