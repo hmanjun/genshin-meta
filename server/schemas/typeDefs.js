@@ -32,6 +32,25 @@ const typeDefs = gql`
         target: String
     }
 
+    type Weapon {
+        name: String
+        imagePath: String
+        type: String
+        description: String
+    }
+
+    type benefit {
+        piece: Int
+        description: String
+    }
+
+    type artifactSet {
+        names: [String]
+        imagePaths: [String]
+        mainStats: String
+        benefits: [benefit]
+    }
+
     type Character {
         _id: ID!
         name: String!
@@ -45,6 +64,9 @@ const typeDefs = gql`
         skillTalents: [skillTalent]
         passiveTalents: [passiveTalent]
         constellations: [constellation]
+        premiumWeapon: Weapon
+        budgetWeapon: Weapon
+        artifactSets: [artifactSet]
         comments: [Comment]
     }
 

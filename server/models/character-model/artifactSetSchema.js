@@ -13,6 +13,10 @@ const artifactSetScheme = new Schema(
             type: [String],
             required: true
         },
+        imagePaths: {
+            type: [String],
+            required: true
+        },
         mainStats: {
             type: String,
             required: true
