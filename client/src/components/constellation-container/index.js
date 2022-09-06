@@ -5,8 +5,8 @@ import ConstCard from "../constellation-card"
 const ConstContainer = ({cons, imgPath}) => {
     return (
         <div>
-            {cons.map((con) => (
-                <ConstCard data={con} imgPath={imgPath}/>
+            {cons.map((con, index) => (
+                <ConstCard data={con} imgPath={imgPath} index={index+1}/>
             ))}
         </div>
     )
