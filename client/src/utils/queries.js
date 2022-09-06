@@ -15,6 +15,7 @@ const QUERY_CARD = gql`
             name
             imagePath
             rarity
+            _id
         }
     }
 `

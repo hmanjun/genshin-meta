@@ -4,7 +4,7 @@ import './style.css'
 
 const Card = ({character}) => {
     return (
-        <Link to={`/characters/${character.name}`} className={character.rarity === 5 ? "gold char-card" : "purple char-card"}>
+        <Link to={`/characters/${character._id}`} className={character.rarity === 5 ? "gold char-card" : "purple char-card"}>
             <img alt={`${character.name} icon`} src={require(`../../images/${character.imagePath}/icon.png`)}/>
             <div className='card-name'><h5>{character.name}</h5></div>
         </Link>

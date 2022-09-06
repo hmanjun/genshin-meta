@@ -5,6 +5,7 @@ import { QUERY_CHARACTER } from '../../utils/queries'
 
 import InfoSection from '../../components/basic-info-section'
 import TalentContainer from '../../components/talent-container'
+import ConstContainer from '../../components/constellation-container'
 
 const Character = () => {
     let {id} = useParams()
@@ -36,6 +37,10 @@ const Character = () => {
                     <div className='content'>
                         <h2 className='content-title'>Passive Talents</h2>
                         <TalentContainer talents={character.passiveTalents} passive={true} imgPath={character.imagePath}/>
+                    </div>
+                    <div className='content'>
+                        <h2 className='content-title'>Constellations</h2>
+                        <ConstContainer cons={character.constellations} imgPath={character.imagePath}/>
                     </div>
                 </div>
             )}

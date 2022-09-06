@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css'
 
 const InfoSection = ({character}) => {
-    console.log(character)
     return (
         <div className='basic-info-holder'>
             <div className={character.rarity === 5 ? "gold spread" : "purple spread"}>
