@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_NAMES } from '../../utils/queries';
+import {HiHome} from 'react-icons/hi'
 import './style.css'
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
 
     return (
         <nav className='side-elems'>
-            <Link to='/' className="nav-link"> <span className="nav-span">Home</span></Link>
+            <Link to='/' className="nav-link"> <span className="nav-span"><HiHome style={{paddingTop: "3px"}}/>Home</span></Link>
             {loading ? (
                 <div>Loading links...</div>
             ) : (
