@@ -159,5 +159,32 @@
         "description": "Activating 2 of Guhua Sword - Raincutter's sword rain attacks greatly increases the DMG of the third. Xingqiu regenerates 3 Energy when sword rain attacks hit enemies.",
         "level": 6
       }
+    ],
+    "teams": [
+      {
+        "name": "Raiden National",
+        "members": [
+          {
+            "name": "Raiden Shogun",
+            "role": "Main-DPS",
+            "imgPath": "raiden"
+          },
+          {
+            "name": "Xiangling",
+            "role": "Sub-DPS",
+            "imgPath": "xiangling"
+          },
+          {
+            "name": "Xingqiu",
+            "role": "Sub-DPS",
+            "imgPath": "xingqiu"
+          },
+          {
+            "name": "Bennett",
+            "role": "Support/Healer",
+            "imgPath": "bennet"
+          }
+        ]
+      }
     ]
 }

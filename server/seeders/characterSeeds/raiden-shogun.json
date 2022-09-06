@@ -114,5 +114,32 @@
           }
         ]
       }
+    ],
+    "teams": [
+      {
+        "name": "Raiden National",
+        "members": [
+          {
+            "name": "Raiden Shogun",
+            "role": "Main-DPS",
+            "imgPath": "raiden"
+          },
+          {
+            "name": "Xiangling",
+            "role": "Sub-DPS",
+            "imgPath": "xiangling"
+          },
+          {
+            "name": "Xingqiu",
+            "role": "Sub-DPS",
+            "imgPath": "xingqiu"
+          },
+          {
+            "name": "Bennett",
+            "role": "Support/Healer",
+            "imgPath": "bennet"
+          }
+        ]
+      }
     ]
 }

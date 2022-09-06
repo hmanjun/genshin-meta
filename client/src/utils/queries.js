@@ -87,6 +87,14 @@ const QUERY_CHARACTER = gql`
           description
         }
       }
+      teams {
+        name
+        members {
+          name
+          imgPath
+          role
+        }
+      }
     }
   }
 `

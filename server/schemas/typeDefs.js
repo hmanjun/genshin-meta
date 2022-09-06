@@ -51,6 +51,17 @@ const typeDefs = gql`
         benefits: [benefit]
     }
 
+    type member {
+        name: String
+        imgPath: String
+        role: String
+    }
+
+    type team {
+        name: String
+        members: [member]
+    }
+
     type Character {
         _id: ID!
         name: String!
@@ -67,6 +78,7 @@ const typeDefs = gql`
         premiumWeapon: Weapon
         budgetWeapon: Weapon
         artifactSets: [artifactSet]
+        teams: [team]
         comments: [Comment]
     }
 
@@ -91,7 +103,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
 
-        addComment(id:String, name: String!, body: String!, target: String!): Comment
+        addComment(id:ID, name: String!, body: String!, target: String!): Comment
     }
 `
 

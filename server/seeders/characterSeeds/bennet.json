@@ -171,5 +171,32 @@
         "description": "Sword, Claymore, or Polearm-wielding characters inside Fantastic Voyage's radius gain a 15% Pyro DMG Bonus. Normal and Charged Attacks now do Pyro DMG.",
         "level": 6
       }
+    ],
+    "teams": [
+      {
+        "name": "Raiden National",
+        "members": [
+          {
+            "name": "Raiden Shogun",
+            "role": "Main-DPS",
+            "imgPath": "raiden"
+          },
+          {
+            "name": "Xiangling",
+            "role": "Sub-DPS",
+            "imgPath": "xiangling"
+          },
+          {
+            "name": "Xingqiu",
+            "role": "Sub-DPS",
+            "imgPath": "xingqiu"
+          },
+          {
+            "name": "Bennett",
+            "role": "Support/Healer",
+            "imgPath": "bennet"
+          }
+        ]
+      }
     ]
 }

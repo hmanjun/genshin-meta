@@ -57,6 +57,7 @@ const Character = () => {
                             <ArtifactsContainer set={character.artifactSets[0]}/>
                         </div>
                     )}
+                    
                 </div>
             )}
             
