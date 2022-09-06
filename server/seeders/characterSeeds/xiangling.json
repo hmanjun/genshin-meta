@@ -163,5 +163,32 @@
         "description": "For the duration of Pyronado, all party members receive a 15% Pyro DMG Bonus.",
         "level": 6
       }
+    ],
+    "teams": [
+      {
+        "name": "Raiden National",
+        "members": [
+          {
+            "name": "Raiden Shogun",
+            "role": "Main-DPS",
+            "imgPath": "raiden"
+          },
+          {
+            "name": "Xiangling",
+            "role": "Sub-DPS",
+            "imgPath": "xiangling"
+          },
+          {
+            "name": "Xingqiu",
+            "role": "Sub-DPS",
+            "imgPath": "xingqiu"
+          },
+          {
+            "name": "Bennett",
+            "role": "Support/Healer",
+            "imgPath": "bennet"
+          }
+        ]
+      }
     ]
 }

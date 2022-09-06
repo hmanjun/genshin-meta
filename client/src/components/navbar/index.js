@@ -9,13 +9,13 @@ const Navbar = () => {
     const characters = data?.allCharacters || []
 
     return (
-        <nav>
+        <nav className='side-elems'>
             <Link to='/' className="nav-link"> <span className="nav-span">Home</span></Link>
             {loading ? (
                 <div>Loading links...</div>
             ) : (
                 characters.map((char) => (
-                    <Link to={`/characters/${char.name}`} className="nav-link">
+                    <Link to={`/characters/${char._id}`} className="nav-link">
                         <span className="nav-span">{`${char.name} build`}</span>
                     </Link>
                 ))

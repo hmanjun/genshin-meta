@@ -6,3 +6,9 @@ body {
 a{
   text-decoration: none;
 }
+
+@media screen and (max-width: 1110px) {
+  .side-elems {
+    width: 99%;
+  }
+}

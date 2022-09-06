@@ -32,7 +32,38 @@ const typeDefs = gql`
         target: String
     }
 
+    type Weapon {
+        name: String
+        imagePath: String
+        type: String
+        description: String
+    }
+
+    type benefit {
+        piece: Int
+        description: String
+    }
+
+    type artifactSet {
+        names: [String]
+        imagePaths: [String]
+        mainStats: String
+        benefits: [benefit]
+    }
+
+    type member {
+        name: String
+        imgPath: String
+        role: String
+    }
+
+    type team {
+        name: String
+        members: [member]
+    }
+
     type Character {
+        _id: ID!
         name: String!
         updatedAt: String!
         imagePath: String
@@ -44,6 +75,10 @@ const typeDefs = gql`
         skillTalents: [skillTalent]
         passiveTalents: [passiveTalent]
         constellations: [constellation]
+        premiumWeapon: Weapon
+        budgetWeapon: Weapon
+        artifactSets: [artifactSet]
+        teams: [team]
         comments: [Comment]
     }
 
@@ -61,6 +96,7 @@ const typeDefs = gql`
     type Query {
         allCharacters: [Character]
         allComments: [Comment]
+        getCharacter(_id: String): [Character]
     }
 
     type Mutation {

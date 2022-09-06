@@ -6,6 +6,10 @@ const weaponSchema = new Schema(
             type: String,
             required: true
         },
+        imagePath: {
+            type: String,
+            required: true
+        },
         type: {
             type: String,
             required: true

@@ -85,5 +85,61 @@
         "description": "While in the Musou Isshin state applied by Secret Art: Musou Shinsetsu, attacks by the Raiden Shogun that are considered part of her Elemental Burst will decrease all nearby party members' (but not including the Raiden Shogun herself) Elemental Burst CD by 1s when they hit opponents.\nThis effect can trigger once every 1s, and can trigger a total of 5 times during the state's duration.",
         "level": 6
       }
+    ],
+    "premiumWeapon": {
+      "name": "Engulfing Lightning",
+      "imagePath": "engulfing",
+      "type": "Energy Recharge%",
+      "description": "ATK increased by 28/35/42/49/56% of Energy Recharge over the base 100%. You can gain a maximum bonus of 80/90/100/110/120% ATK. Gain 30/35/40/45/50% Energy Recharge for 12s after using an Elemental Burst."
+    },
+    "budgetWeapon": {
+      "name": "The Catch",
+      "imagePath": "catch",
+      "type": "Energy Recharge%",
+      "description": "Increases Elemental Burst DMG by 16/20/24/28/32% and Elemental Burst CRIT Rate by 6/7.5/9/10.5/12%."
+    },
+    "artifactSets": [
+      {
+        "names": ["Emblem of Severed Fate"],
+        "imagePaths": ["eosf"],
+        "mainStats": "ATK%/ATK%/CRIT RATE or CRIT DMG",
+        "benefits": [
+          {
+            "piece": 2,
+            "description": "Energy Recharge +20%"
+          },
+          {
+            "piece": 4,
+            "description": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way."
+          }
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "name": "Raiden National",
+        "members": [
+          {
+            "name": "Raiden Shogun",
+            "role": "Main-DPS",
+            "imgPath": "raiden"
+          },
+          {
+            "name": "Xiangling",
+            "role": "Sub-DPS",
+            "imgPath": "xiangling"
+          },
+          {
+            "name": "Xingqiu",
+            "role": "Sub-DPS",
+            "imgPath": "xingqiu"
+          },
+          {
+            "name": "Bennett",
+            "role": "Support/Healer",
+            "imgPath": "bennet"
+          }
+        ]
+      }
     ]
 }

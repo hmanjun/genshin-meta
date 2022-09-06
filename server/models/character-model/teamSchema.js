@@ -3,7 +3,8 @@ const {Schema, model} = require('mongoose')
 const memberSchema = new Schema(
     {
         name: String,
-        role: String
+        role: String,
+        imgPath: String
     }
 )
 

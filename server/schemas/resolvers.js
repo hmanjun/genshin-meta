@@ -10,6 +10,11 @@ const resolvers = {
 
         allComments: async () => {
             return await Comment.find().sort({_id:-1}).limit(3)
+        },
+
+        getCharacter: async (parent, {_id}) => {
+            const params = _id ? {_id} : {}
+            return Character.find(params).populate('comments')
         }
     },
 
