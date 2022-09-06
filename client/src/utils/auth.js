@@ -5,6 +5,16 @@ class AuthService {
         return decode(this.getToken())
     }
 
+    /*
+    isTokenExpired(token) {
+        const decoded = decode(token)
+        if (decoded.exp < Date.now() / 1000) {
+            localStorage.removeItem('id_token')
+            return true
+        }
+        return false
+    }*/
+
     loggedIn() {
         const token = this.getToken()
         return token ? true : false

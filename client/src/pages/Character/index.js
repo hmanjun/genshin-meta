@@ -9,6 +9,7 @@ import ConstContainer from '../../components/constellation-container'
 import WeaponContainer from '../../components/weapons-container'
 import ArtifactsContainer from '../../components/artifacts-container'
 import TeamsContainer from '../../components/team-container'
+import CommentForm from '../../components/comment-form'
 
 const Character = () => {
     let {id} = useParams()
@@ -64,7 +65,10 @@ const Character = () => {
                             <TeamsContainer teams={character.teams}/>
                         </div>
                     )}
-                    
+                    <div className='content'>
+                        <h2 className='content-title'>Add Comment</h2>
+                        <CommentForm target={character.name} id={id}/>
+                    </div>
                 </div>
             )}
             

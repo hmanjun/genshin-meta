@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ArtifactCard = ({data, index, twoPiece}) => {
-    console.log(data, index)
     return (
         <div className='talent-card'>
             <div className='talent-sumary-wrapper'>

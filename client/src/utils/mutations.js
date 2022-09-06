@@ -21,6 +21,17 @@ export const ADD_USER = gql `
         }
     }
 `
+
+export const ADD_COMMENT = gql`
+    mutation addComm($name: String!, $body: String!, $target: String!, $id: ID) {
+        addComment(name: $name, body: $body, target: $target, id: $id) {
+            _id
+            name
+            body
+            target
+        }
+    }
+`
 /*
 const ADD_USER = gql `
     mutation addUser($username: String!, $email, String!, $password: String!){

@@ -23,7 +23,7 @@ const CommentBar = () => {
                 <div className="log-btn" onClick={logout}>
                     <div className='log-wrapper'>
                         <img className='log-btn-icon' alt="user icon" src={require(`../../images/generic/user-avatar.webp`)}/>
-                        <span className="log-span">Guest (Logout)</span>
+                        <span className="log-span">{`${Auth.getUser().data.username} (Logout)`}</span>
                     </div>
                 </div>
             ):(
