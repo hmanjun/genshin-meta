@@ -3,12 +3,18 @@ import {Link} from 'react-router-dom'
 
 import {useMutation} from '@apollo/client'
 import { ADD_USER } from '../../utils/mutations'
+import ReCAPTCHA from "react-google-recaptcha"
 
 import Auth from '../../utils/auth'
 
 const Signup = () => {
     const [formState, setFormState] = useState({username: '', email: '', password: ''})
     const [addUser, {error, data}] = useMutation(ADD_USER)
+    const [captchaState, setCaptchaState]  = useState(false)
+
+    const triggerCaptcha = () => {
+        setCaptchaState(true)
+    }
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -68,8 +74,13 @@ const Signup = () => {
                             value={formState.password}
                             onChange={handleChange} 
                         />
+                        <ReCAPTCHA
+                            sitekey='6LeCR9khAAAAAPOri3EukIN2MHlelctztDawhRrb'
+                            onChange={triggerCaptcha} 
+                        />
                         <div className='form-btns-holder'>
-                            <button 
+                            <button
+                                disabled={!captchaState} 
                                 className='form-submit'
                                 type='submit'
                             >
