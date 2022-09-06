@@ -6,7 +6,11 @@ const TalentCard = ({info, passive, imgPath, index}) => {
     return (
         <div className='talent-card'>
             <div className='talent-sumary-wrapper'>
-                <img alt={`skill ${index}`} src={require(`../../images/${imgPath}/s${index}.png`)} className='talent-icon'/>
+                {passive ? (
+                    <img alt={`passive ${index}`} src={require(`../../images/${imgPath}/p${index}.png`)} className='talent-icon'/>
+                ):(
+                    <img alt={`skill ${index}`} src={require(`../../images/${imgPath}/s${index}.png`)} className='talent-icon'/>
+                )}
                 <h4 className='talent-name'>{info.name}</h4>
                 {passive ? (
                     <h5>{info.unlock}</h5>

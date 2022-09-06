@@ -33,6 +33,10 @@ const Character = () => {
                         <h2 className='content-title'>Skill Talents</h2>
                         <TalentContainer talents={character.skillTalents} passive={false} imgPath={character.imagePath}/>
                     </div>
+                    <div className='content'>
+                        <h2 className='content-title'>Passive Talents</h2>
+                        <TalentContainer talents={character.passiveTalents} passive={true} imgPath={character.imagePath}/>
+                    </div>
                 </div>
             )}
             
