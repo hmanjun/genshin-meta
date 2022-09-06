@@ -9,7 +9,7 @@ const Navbar = () => {
     const characters = data?.allCharacters || []
 
     return (
-        <nav>
+        <nav className='side-elems'>
             <Link to='/' className="nav-link"> <span className="nav-span">Home</span></Link>
             {loading ? (
                 <div>Loading links...</div>

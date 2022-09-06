@@ -32,6 +32,17 @@
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1110px) {
+    .talent-card {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .talent-sumary-wrapper {
+        width: 80%;
+    }
+  }
+
 .talent-description-wrapper{
     color: white;
     background-image: linear-gradient(rgb(43, 43, 43),rgb(0, 0, 0));

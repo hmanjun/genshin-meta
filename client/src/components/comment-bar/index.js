@@ -18,7 +18,7 @@ const CommentBar = () => {
     }
 
     return (
-        <aside>
+        <aside className='side-elems'>
             {Auth.loggedIn() ? (
                 <div className="log-btn" onClick={logout}>
                     <div className='log-wrapper'>
