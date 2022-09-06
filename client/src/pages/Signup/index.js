@@ -12,6 +12,8 @@ const Signup = () => {
     const [addUser, {error, data}] = useMutation(ADD_USER)
     const [captchaState, setCaptchaState]  = useState(false)
 
+    //Get secret key and add to .env file at the root of client folder
+    const skey = process.env.REACT_APP_KEY
     const triggerCaptcha = () => {
         setCaptchaState(true)
     }
@@ -75,7 +77,7 @@ const Signup = () => {
                             onChange={handleChange} 
                         />
                         <ReCAPTCHA
-                            sitekey='6LeCR9khAAAAAPOri3EukIN2MHlelctztDawhRrb'
+                            sitekey={skey}
                             onChange={triggerCaptcha} 
                         />
                         <div className='form-btns-holder'>
