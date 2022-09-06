@@ -5,8 +5,8 @@ const WeaponContainer = ({weapons}) => {
     console.log(weapons)
     return (
         <div>
-            <WeaponCard data={weapons.premiumWeapon}/>
-            <WeaponCard data={weapons.budgetWeapon}/>
+            <WeaponCard data={weapons.premiumWeapon} premium={true}/>
+            <WeaponCard data={weapons.budgetWeapon} premium={false}/>
         </div>
     )
 }
