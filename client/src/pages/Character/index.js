@@ -8,6 +8,7 @@ import TalentContainer from '../../components/talent-container'
 import ConstContainer from '../../components/constellation-container'
 import WeaponContainer from '../../components/weapons-container'
 import ArtifactsContainer from '../../components/artifacts-container'
+import TeamsContainer from '../../components/team-container'
 
 const Character = () => {
     let {id} = useParams()
@@ -55,6 +56,12 @@ const Character = () => {
                         <div className='content'>
                             <h2 className='content-title'>Best Artifacts</h2>
                             <ArtifactsContainer set={character.artifactSets[0]}/>
+                        </div>
+                    )}
+                    {character.teams.length > 0 && (
+                        <div className='content'>
+                            <h2 className='content-title'>Best Teams</h2>
+                            <TeamsContainer teams={character.teams}/>
                         </div>
                     )}
                     
