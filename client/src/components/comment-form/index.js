@@ -33,6 +33,7 @@ const CommentForm = ({target, id}) => {
                     variables: {...input}
                 })
             }
+            window.location.reload(false)
         } catch (err) {
             console.error(err)
         }
