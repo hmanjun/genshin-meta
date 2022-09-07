@@ -47,9 +47,14 @@ const resolvers = {
             return commentData
         },
 
-        deleteComment: async (parent, {id}) => {
+        deleteComment: async (parent, {id, charId}) => {
             const commentData = await Comment.deleteOne(
                 {_id: id}
+            )
+            await Character.updateMany(
+                {},
+                {$pull: {comments: commentData._id}},
+                {new: true}
             )
             return commentData
         },
