@@ -8,26 +8,26 @@ const CommentContainer = ({comments}) => {
     const [report, {errorR, dataRep}] = useMutation(REPORT_COMMENT)
     const [deleteCom, {errorD, dataDel}] = useMutation(DELETE_COMMENT)
 
-    const reportComment = async(id) => {
+    async function reportComment(id) {
         try {
             await report({
-                variables: {id: id}
+                variables: {reportCommentId: id}
             })
         } catch (err) {
             console.error(err)
         }
     }
 
-    const deleteComment = async(id) => {
+    async function deleteComment(id) {
         try {
             await deleteCom({
-                variables: {id: id}
+                variables: {deleteCommentId: id}
             })
         } catch (err) {
-            console.error(e)
+            console.error(err)
         }
     }
-
+    console.log(comments)
     return (
         <div>
             {comments.map((data) => (
@@ -37,9 +37,9 @@ const CommentContainer = ({comments}) => {
                         <h4 className='c-name'>{data.name}</h4>
                     </div>
                     <p style={{color: "white"}}>{data.body}</p>
-                    <button type='button' onClick={reportComment(data._id)}></button>
+                    <button type='button' onClick={(e) => reportComment(data._id)}>Report Comment</button>
                     {data.reports > 1 && (
-                        <button type="button" onClick={deleteCom}></button>
+                        <button type="button" onClick={(e) => deleteComment(data._id)}>Delete Comment</button>
                     )}
                 </div>
             ))}
