@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css'
 
 const TalentCard = ({info, passive, imgPath, index}) => {
-    //console.log(info, passive, imgPath, index)
     return (
         <div className='talent-card'>
             <div className='talent-sumary-wrapper'>

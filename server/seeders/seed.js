@@ -5,7 +5,6 @@ const characterSeeds = require('./characterSeeds')
 db.once('open', async () => {
     try {
         await Character.deleteMany({})
-        //await User.deleteMany({})
         await Comment.deleteMany({})
         await Character.create(characterSeeds)
     } catch (err) {

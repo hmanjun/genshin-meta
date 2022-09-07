@@ -103,6 +103,9 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
 
+
+        reportComment(id:ID): Comment
+        deleteComment(id:ID): Comment
         addComment(id:ID, name: String!, body: String!, target: String!): Comment
     }
 `

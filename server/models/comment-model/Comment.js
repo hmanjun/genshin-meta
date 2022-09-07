@@ -8,7 +8,11 @@ const commentSchema = new Schema(
             trim: true
         },
         body: String,
-        target: String
+        target: String,
+        reports: {
+            type: Number,
+            default: 0
+        }
     }
 )
 
