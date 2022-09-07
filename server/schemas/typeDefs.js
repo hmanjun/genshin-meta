@@ -30,6 +30,7 @@ const typeDefs = gql`
         name: String
         body: String
         target: String
+        reports: Int
     }
 
     type Weapon {

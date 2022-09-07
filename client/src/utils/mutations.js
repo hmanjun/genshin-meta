@@ -32,6 +32,30 @@ export const ADD_COMMENT = gql`
         }
     }
 `
+export const REPORT_COMMENT = gql`
+    mutation reportComm($reportCommentId: ID) {
+        reportComment(id: $reportCommentId) {
+        _id
+        name
+        body
+        target
+        reports
+        }
+    }
+`
+
+export const DELETE_COMMENT = gql`
+    mutation delComment($deleteCommentId: ID) {
+        deleteComment(id: $deleteCommentId) {
+        _id
+        name
+        body
+        target
+        reports
+        }
+    }
+`
+
 /*
 const ADD_USER = gql `
     mutation addUser($username: String!, $email, String!, $password: String!){
