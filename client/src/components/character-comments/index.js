@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { useMutation } from '@apollo/client'
 import { REPORT_COMMENT } from '../../utils/mutations'
 import { DELETE_COMMENT } from '../../utils/mutations'
@@ -8,11 +9,14 @@ const CommentContainer = ({comments}) => {
     const [report, {errorR, dataRep}] = useMutation(REPORT_COMMENT)
     const [deleteCom, {errorD, dataDel}] = useMutation(DELETE_COMMENT)
 
+    const [reloadState, setReloadState] = useState(0)
+
     async function reportComment(id) {
         try {
             await report({
                 variables: {reportCommentId: id}
             })
+            setReloadState(reloadState+1)
         } catch (err) {
             console.error(err)
         }
@@ -23,6 +27,7 @@ const CommentContainer = ({comments}) => {
             await deleteCom({
                 variables: {deleteCommentId: id}
             })
+            window.location.reload(false)
         } catch (err) {
             console.error(err)
         }
