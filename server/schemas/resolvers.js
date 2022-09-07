@@ -38,6 +38,22 @@ const resolvers = {
 
         },
 
+        reportComment: async (parent, {id}) => {
+            const commentData = await Comment.findOneAndUpdate(
+                {_id: id},
+                {$inc: {reports: 1}},
+                {new: true}
+            )
+            return commentData
+        },
+
+        deleteComment: async (parent, {id}) => {
+            const commentData = await Comment.deleteOne(
+                {_id: id}
+            )
+            return commentData
+        },
+
         addComment: async (parent, {id, name, body, target}) => {
             const commentData = await Comment.create({name,body,target})
             await Character.findOneAndUpdate(

@@ -65,6 +65,7 @@ const QUERY_CHARACTER = gql`
         name
         body
         target
+        reports
       }
       premiumWeapon {
         name
